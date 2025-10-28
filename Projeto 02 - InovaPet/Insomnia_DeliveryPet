@@ -1,0 +1,533 @@
+type: collection.insomnia.rest/5.0
+name: Projeto Delivery Pet
+meta:
+  id: wrk_71be9975fdc64b9eb82aaaacf5141218
+  created: 1761155240181
+  modified: 1761155240181
+  description: ""
+collection:
+  - name: Categoria
+    meta:
+      id: fld_1024f1bb59cc46789536caf792654d1e
+      created: 1761155280418
+      modified: 1761155280418
+      sortKey: -1761155280418
+      description: ""
+    children:
+      - url: http://localhost:8080/categorias
+        name: Listar Todas as Categorias
+        meta:
+          id: req_3c601f9efa3541c2856ec08b6dd18c65
+          created: 1761155298945
+          modified: 1761168988448
+          isPrivate: false
+          description: ""
+          sortKey: -1761155312528
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/7
+        name: Buscar Categoria por Id
+        meta:
+          id: req_08454828cb034ef69012c2bd63c37d87
+          created: 1761155312428
+          modified: 1761168113872
+          isPrivate: false
+          description: ""
+          sortKey: -1761155312428
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Criar Categoria
+        meta:
+          id: req_2a3efb39a87e44bc80bcf3cb4d601ae1
+          created: 1761155516650
+          modified: 1761241694321
+          isPrivate: false
+          description: ""
+          sortKey: -1761155298895
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            		"nome": "Comidas Especiais para Cachorros Filhotes",
+            		"descricao": "Alimentos adaptados às necessidades nutricionais de cachorros filhotes, com ingredientes naturais e balanceados para apoiar o crescimento saudável.",
+              "tipo": "Natural"
+
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Atualizar Categoria
+        meta:
+          id: req_8a1e63e3b7594facbc8b7882954bbb34
+          created: 1761155870794
+          modified: 1761242709702
+          isPrivate: false
+          description: ""
+          sortKey: -1761155298870
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            		"id": 7,
+            		"nome": "Comidas Especiais para Pet Idososssssssssss",
+            		"descricao": "Alimentos adaptados às necessidades nutricionais de pets idosos, com baixo teor de gordura e alta digestibilidade",
+            		"dataCriacao": "2025-10-22",
+            		"tipo": "Natural"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/14
+        name: Deletar Categoria
+        meta:
+          id: req_c209ed3b4a88431b9eb2536643b59e30
+          created: 1761155948759
+          modified: 1761247393284
+          isPrivate: false
+          description: ""
+          sortKey: -1761155298845
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/descricao/idosos
+        name: Buscar Categoria por Descrição
+        meta:
+          id: req_c33aac5a22524ab4b00d7428a9fd55c1
+          created: 1761161793213
+          modified: 1761164355251
+          isPrivate: false
+          description: ""
+          sortKey: -1761161793213
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "http://localhost:8080/categorias/periodo?dataInicial=2025-10-01T00:00:00&\
+          dataFinal=2025-10-26T23:59:59 "
+        name: Buscar Categoria por Período da Criação
+        meta:
+          id: req_85e352d2ff204241af7c736962d37fe2
+          created: 1761161823466
+          modified: 1761222628165
+          isPrivate: false
+          description: ""
+          sortKey: -1761161823466
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuário
+    meta:
+      id: fld_2dba0dd9c91e4e3fbd2331061c5a1767
+      created: 1761155999077
+      modified: 1761155999077
+      sortKey: -1761155999078
+      description: ""
+    children:
+      - url: http://localhost:8080/usuarios
+        name: Listar Todos os Usuários
+        meta:
+          id: req_a13d1bb121604d79b03b5abd6f420c28
+          created: 1761156050180
+          modified: 1761169342997
+          isPrivate: false
+          description: ""
+          sortKey: -1761156150663
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/2
+        name: Buscar Usuário por Id
+        meta:
+          id: req_e3bf77a06b7d4f23a56bbbadbd33a98b
+          created: 1761156073603
+          modified: 1761241906437
+          isPrivate: false
+          description: ""
+          sortKey: -1761156150563
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios
+        name: Criar Usuário
+        meta:
+          id: req_5b202d82bec24e158048ffbc4f98f400
+          created: 1761156098298
+          modified: 1761242861875
+          isPrivate: false
+          description: ""
+          sortKey: -1761156098298
+        method: POST
+        body:
+          mimeType: application/json
+          text: >
+            {		
+            		"nome": "Bruna Bru",
+            		"usuario": "brubru@gmail.com",
+            		"senha": "senha123459",
+            		"foto": "https://drive.google.com/file/d/1Qi4KRp6Hd-DlADppZPbdsUvz1L4XP-iM/view?usp=sharing"
+
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios
+        name: Atualizar Usuário
+        meta:
+          id: req_2688790af879411dba5aceefa7b742fe
+          created: 1761156119911
+          modified: 1761242767134
+          isPrivate: false
+          description: ""
+          sortKey: -1761156119911
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            		"id": 4,
+            		"nome": "João Joséeeeeeeeeeeeeee",
+            		"usuario": "joaojose@gmail.com",
+            		"senha": "senha1234",
+            		"foto": "https://ik.imagekit.io/0lohuh51eq/1000031158%20(1).jpg?updatedAt=1761153630811"
+
+            	
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/nome/Vanderleia
+        name: Buscar Usuário por Nome
+        meta:
+          id: req_b7fdfcef23da496980e0ab5fb72605d2
+          created: 1761229660267
+          modified: 1761242886822
+          isPrivate: false
+          description: ""
+          sortKey: -1761229660267
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produto
+    meta:
+      id: fld_951b44e92f1d4a10a1744e49fa617c69
+      created: 1761156762650
+      modified: 1761156762650
+      sortKey: -1761156762650
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos/15
+        name: Deletar Produto
+        meta:
+          id: req_76de3e9c32ec41aa8a3ae23cbb6dfd4f
+          created: 1761156807022
+          modified: 1761242573214
+          isPrivate: false
+          description: ""
+          sortKey: -1761156807022
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Atualizar Produto
+        meta:
+          id: req_b4912f6b945b4d6baf32e06c7ec53115
+          created: 1761156822965
+          modified: 1761242561921
+          isPrivate: false
+          description: ""
+          sortKey: -1761156822965
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": 15,
+            	"nome": "Ração Premier Natu para Cachorros Adultos Castrados Sabor Abóbora",
+            	"descricao": "Indicada para cachorros castrados a partir dos 6 meses de idade",
+            	"preco": 87.9,
+            	"foto": "nattu.jpg",
+            	"quantidade": 200,
+            	"tipoPet": "Cachorro",
+              	"proteina": "Frango",
+              	"faixaEtaria": "Adulto",
+              	"categoria": {
+              	  "id": 7
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Criar Produto
+        meta:
+          id: req_0ac8eb0cd86f4ddc80a272c1247b5bee
+          created: 1761156854966
+          modified: 1761242356974
+          isPrivate: false
+          description: ""
+          sortKey: -1761156854966
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            		"nome": "Ração Premier Nattu para Cachorros Adultos Castrados Sabor Abóbora",
+            		"descricao": "Indicada para cachorros castrados a partir dos 6 meses de idade",
+            		"preco": 87.9,
+            		"foto": "nattu.jpg",
+            		"quantidade": 210,
+            		"tipoPet": "Cachorro",
+              	"proteina": "Frango",
+              	"faixaEtaria": "Adulto",
+              	"categoria": {
+              	  "id": 7
+              }
+
+            			
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/7
+        name: Buscar Produto por Id
+        meta:
+          id: req_0d3b33a658ef42ada9fd6d5f9a2ffd43
+          created: 1761156880166
+          modified: 1761171047631
+          isPrivate: false
+          description: ""
+          sortKey: -1761156880166
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Listar todos os Produtos
+        meta:
+          id: req_b7c09fde67db405d94338528440108c2
+          created: 1761156892812
+          modified: 1761161229850
+          isPrivate: false
+          description: ""
+          sortKey: -1761156892812
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/nome/premier
+        name: Buscar Produto pelo Nome
+        meta:
+          id: req_737a2573c98a49539cf4e4a165f3d1f6
+          created: 1761161920842
+          modified: 1761171351281
+          isPrivate: false
+          description: ""
+          sortKey: -1761161920842
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/recomendar?tipoPet=Cachorro&peso=10.5&idade=5
+        name: Buscar por Recomendação
+        meta:
+          id: req_ca751eb0272242078b88281f192be147
+          created: 1761228272606
+          modified: 1761228287066
+          isPrivate: false
+          description: ""
+          sortKey: -1761228272606
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_ee9ddaa9e9a17c0b4678ddb64fe62f305a8de7f7
+    created: 1761155240205
+    modified: 1761155240205
+environments:
+  name: Base Environment
+  meta:
+    id: env_ee9ddaa9e9a17c0b4678ddb64fe62f305a8de7f7
+    created: 1761155240194
+    modified: 1761155240194
+    isPrivate: false

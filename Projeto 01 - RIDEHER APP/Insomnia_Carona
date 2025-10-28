@@ -1,0 +1,203 @@
+type: collection.insomnia.rest/5.0
+name: Carona
+meta:
+  id: wrk_8011b1e31bf545b6b2d51578fc70b695
+  created: 1761659962404
+  modified: 1761659984970
+  description: ""
+collection:
+  - name: Carona
+    meta:
+      id: fld_eb78b540993a487fa2fb41ac4138faa2
+      created: 1760630417010
+      modified: 1760630417009
+      sortKey: -1760443094073
+      description: ""
+    children:
+      - url: http://localhost:8080/viagens
+        name: Listar Todas
+        meta:
+          id: req_26a3d49715f242859f33651bf9ade9fe
+          created: 1760630417175
+          modified: 1761659993207
+          isPrivate: false
+          description: ""
+          sortKey: -1760443133806
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/viagens/5
+        name: Procurar por ID
+        meta:
+          id: req_4a7c656516684190ad041f2ba8112ac2
+          created: 1760630417218
+          modified: 1761659995160
+          isPrivate: false
+          description: ""
+          sortKey: -1760443037665
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/viagens/origem/campinas
+        name: Procurar por origem
+        meta:
+          id: req_ec812c9c16674b4f9cc2b3c3b3113d79
+          created: 1760630417220
+          modified: 1761660006253
+          isPrivate: false
+          description: ""
+          sortKey: -1760442989594.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/viagens
+        name: Criar Carona
+        meta:
+          id: req_a25932d9a65d43b0aed2c3365edae242
+          created: 1760630417226
+          modified: 1761659990102
+          isPrivate: false
+          description: ""
+          sortKey: -1760450060383
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"motorista" : "paulo_henrique",
+            	"origem" : "Americana",
+            	"destino" : "Campinas",
+            	"data" : "2025-10-20",
+            	"vagas_disponiveis" : 3,
+            	"valor_sugerido" : 9.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/viagens
+        name: Atualizar Carona
+        meta:
+          id: req_06df1f071ccd46689b7af91755f1efe0
+          created: 1760630417230
+          modified: 1761659991518
+          isPrivate: false
+          description: ""
+          sortKey: -1760446597094.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 7,
+            	"motorista": "Victor Cristiano",
+            	"origem": "Americana",
+            	"destino": "nova odessa",
+            	"data": "2025-10-17",
+            	"vagas_disponiveis": 9,
+            	"valor_sugerido": 6.0
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/viagens/3
+        name: Deletar Carona
+        meta:
+          id: req_55da1c3910e4482ab87887369ccef301
+          created: 1760630417232
+          modified: 1761659997448
+          isPrivate: false
+          description: ""
+          sortKey: -1760443013629.75
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/viagens/destino/araras
+        name: Procurar por destino
+        meta:
+          id: req_674f3bbdcf66475c8d01ff841b4e148a
+          created: 1760633825132
+          modified: 1761659998649
+          isPrivate: false
+          description: ""
+          sortKey: -1760442965559.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a058b94694464373ad76a2ab795955fb
+    created: 1760443038934
+    modified: 1760443038934
+environments:
+  name: Base Environment
+  meta:
+    id: env_ed7cfb388f154c39879a2fc309acb340
+    created: 1760443038922
+    modified: 1760443038922
+    isPrivate: false
