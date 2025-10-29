@@ -1,0 +1,674 @@
+type: collection.insomnia.rest/5.0
+name: INOVAHER-RH
+meta:
+  id: wrk_793f6bcff3aa4bc68fac00d3b8635f7d
+  created: 1761752039795
+  modified: 1761752039795
+  description: ""
+collection:
+  - name: Local
+    meta:
+      id: fld_254e51047d2c47a5b424e0c00c386333
+      created: 1761762057073
+      modified: 1761762057073
+      sortKey: -1761762057074
+      description: ""
+    children:
+      - name: usuario
+        meta:
+          id: fld_ebb36d5ed33e404681b7d76585f973a2
+          created: 1761674200550
+          modified: 1761762062544
+          sortKey: -1761762062461
+          description: ""
+        children:
+          - url: http://localhost:8080/usuarios/all
+            name: lista todos usuarios
+            meta:
+              id: req_b5bf8787a06d485783af9f2abd81eb0a
+              created: 1761674205257
+              modified: 1761676691755
+              isPrivate: false
+              description: ""
+              sortKey: -1761674205257
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+              - name: ""
+                value: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/1
+            name: listar por id
+            meta:
+              id: req_8900b1f559bf4a539e50b40dd6cef8c9
+              created: 1761675851556
+              modified: 1761678268799
+              isPrivate: false
+              description: ""
+              sortKey: -1761675851556
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/nome/juliana
+            name: listar por nome
+            meta:
+              id: req_d760af96bf494e2aa1d343103ac51bfc
+              created: 1761675886433
+              modified: 1761676939750
+              isPrivate: false
+              description: ""
+              sortKey: -1761675886433
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/cadastrar
+            name: criar usuario
+            meta:
+              id: req_0f38fbf3908248d5bbc9597cf458b133
+              created: 1761675924187
+              modified: 1761748373626
+              isPrivate: false
+              description: ""
+              sortKey: -1761675924187
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Patricia",
+                	"foto": "-",
+                	"usuario": "patya@email.com.br",
+                	"senha": "rootroot"
+                	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/atualizar
+            name: atualizar usuario
+            meta:
+              id: req_944939cf237c43509cb8d07abe3a6e83
+              created: 1761675948348
+              modified: 1761678478993
+              isPrivate: false
+              description: ""
+              sortKey: -1761675948348
+            method: PUT
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                	"id": 1,
+                	"nome": "Juliana Aparecida",
+                	"usuario": "juju@email.com.br",
+                	"senha": "$2a$10$7PR.rBQtN/gMXqQHJ2ItsOx82s6CDzmyaunFhW1ZaryQtX9iOok9S",
+                	"foto": "-"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - name: security
+            meta:
+              id: fld_9adc9b34152046549942073f630979c9
+              created: 1761674383421
+              modified: 1761740110130
+              sortKey: -1761675948448
+              description: ""
+            children:
+              - url: http://localhost:8080/usuarios/logar
+                name: logar
+                meta:
+                  id: req_b637581425c54f04ba6842490367a92f
+                  created: 1761674393573
+                  modified: 1761757450574
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1761674393573
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: |
+                    {
+                    	"usuario": "root@root.com.br",
+                    	"senha": "rootroot"
+                    }
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                  - name: User-Agent
+                    value: insomnia/11.6.2
+                  - name: Authorization
+                    value: "{% response 'body', 'n/a', '', 'never', 60 %}"
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/usuarios/cadastrar
+                name: criar root
+                meta:
+                  id: req_7d8a59aa88f843529a69430cbca2432c
+                  created: 1761675628480
+                  modified: 1761756075767
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1761675628480
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: >
+                    {
+                    	"nome": "Root",
+                    	"usuario": "root@root.com.br",
+                    	"senha": "rootroot",
+                    	"foto": "-"
+                    }
+
+                      "token": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzYxNzU2MDU0LCJleHAiOjE3NjE3NTk2NTR9.IHQVW-DKcCjjwG4jjH79wVztboJxdGPt6VLpiasTXut_Ck2fpN7XSWHzt_Vv49Wh"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                  - name: User-Agent
+                    value: insomnia/11.6.2
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+      - name: colaboradores
+        meta:
+          id: fld_6fcb08d5e72344c9932cd50b474e0173
+          created: 1761740057619
+          modified: 1761762064417
+          sortKey: -1761762062561
+          description: ""
+        children:
+          - url: http://localhost:8080/colaboradores
+            name: lista todos colaboradores
+            meta:
+              id: req_7de4a8cd08e147e69428242ac172b598
+              created: 1761740057622
+              modified: 1761744848685
+              isPrivate: false
+              description: ""
+              sortKey: -1761674205257
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+              - name: ""
+                value: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/colaboradores/22
+            name: listar por id colaborador
+            meta:
+              id: req_e93ed062d53d443ab832f5c9716d636e
+              created: 1761740057624
+              modified: 1761745600224
+              isPrivate: false
+              description: ""
+              sortKey: -1761675851556
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/colaboradores/nome/juliana
+            name: listar por nome colaborador
+            meta:
+              id: req_2f287a577a7843f38ebcb4fce0e13bbd
+              created: 1761740057626
+              modified: 1761742629923
+              isPrivate: false
+              description: ""
+              sortKey: -1761675886433
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/colaboradores
+            name: criar colaborador
+            meta:
+              id: req_ef70f20e32fd4ba6a593087e05227165
+              created: 1761740057627
+              modified: 1761748267267
+              isPrivate: false
+              description: ""
+              sortKey: -1761675924187
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Ana Lima",
+                  "dataNascimento": "1990-05-12",
+                  "valorHora": 75.50,
+                  "horasTrabalhadas": 160,
+                  "bonus": 1200.00,
+                  "descontos": 300.00,
+                  "departamento": { "id": 1 }
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/colaboradores
+            name: atualizar colaborador
+            meta:
+              id: req_8e3df9d6049544e483d63ff9d0522c79
+              created: 1761740057629
+              modified: 1761745475124
+              isPrivate: false
+              description: ""
+              sortKey: -1761675948348
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 22,
+                  "nome": "Ana Souza",
+                  "dataNascimento": "12/05/1990",
+                  "valorHora": 75.50,
+                  "horasTrabalhadas": 160,
+                  "bonus": 1200.00,
+                  "descontos": 300.00,
+                  "departamento": { "id": 3 }
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/colaboradores/26
+            name: delete colaborador
+            meta:
+              id: req_91e1dcce03e04e7981b5115c6a4b2d3c
+              created: 1761743891675
+              modified: 1761745101982
+              isPrivate: false
+              description: ""
+              sortKey: -1761743891675
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/colaboradores/salariofinal/22
+            name: listar salario final
+            meta:
+              id: req_cb8f2bccace54a61be6b7ffd0c6e21c5
+              created: 1761745168212
+              modified: 1761745347632
+              isPrivate: false
+              description: ""
+              sortKey: -1761745168212
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: departamentos
+        meta:
+          id: fld_bc3b29f54d5a45fe8c9d2a4ba9923d19
+          created: 1761741147328
+          modified: 1761762066374
+          sortKey: -1761762062661
+          description: ""
+        children:
+          - url: http://localhost:8080/departamentos
+            name: lista todos dp
+            meta:
+              id: req_079215e569224ac690a194cfa21cdd15
+              created: 1761741147331
+              modified: 1761741956945
+              isPrivate: false
+              description: ""
+              sortKey: -1761674205257
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+              - name: ""
+                value: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/1
+            name: listar por id dp
+            meta:
+              id: req_faf1202d3c994afd9688b74e9f3db891
+              created: 1761741147336
+              modified: 1761741751786
+              isPrivate: false
+              description: ""
+              sortKey: -1761675851556
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: " http://localhost:8080/departamentos/nome/vendas"
+            name: " listar nome dp"
+            meta:
+              id: req_07db6f0c0608491d8a2ef20a807d1dec
+              created: 1761741147338
+              modified: 1761741738556
+              isPrivate: false
+              description: ""
+              sortKey: -1761675886433
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/departamentos
+            name: cadastrar dp
+            meta:
+              id: req_86d70c970f674355bcf2f58496682d38
+              created: 1761741147340
+              modified: 1761748347451
+              isPrivate: false
+              description: ""
+              sortKey: -1761675924187
+            method: POST
+            body:
+              mimeType: application/json
+              text: >2-
+                  {
+                        "nome": "Financeiro",
+                        "descricao": "Responsável pela prospecção de clientes, negociações e fechamento de contratos."
+                    }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/departamentos/atualizar
+            name: atualizar dp
+            meta:
+              id: req_94ef4c7d1cbb4c11989ae6248b8998c3
+              created: 1761741147341
+              modified: 1761741786166
+              isPrivate: false
+              description: ""
+              sortKey: -1761675948348
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: " http://localhost:8080/departamentos/descricao/clientes"
+            name: listar descricao dp
+            meta:
+              id: req_082533efb9f1438288e2e4dd3d8c7731
+              created: 1761741834481
+              modified: 1761741996296
+              isPrivate: false
+              description: ""
+              sortKey: -1761741834481
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/departamentos/1
+            name: delete dp
+            meta:
+              id: req_ddd6b51866664f179ea5b059405f0b4e
+              created: 1761742011125
+              modified: 1761742095274
+              isPrivate: false
+              description: ""
+              sortKey: -1761742011125
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+              - name: Authorization
+                value: "{% response 'body', 'req_0c4b2de62e904d4692bde2df0d53596e',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_226bf690daba4476adfc9ec0ecd9d564
+    created: 1761673407684
+    modified: 1761673407684
+environments:
+  name: Base Environment
+  meta:
+    id: env_5e7dd3ea823845fd89b4a3fcfa35b409
+    created: 1761673407641
+    modified: 1761673407641
+    isPrivate: false
